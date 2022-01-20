@@ -1,4 +1,4 @@
-version: "2.1"
+version: "3.7"
 services:
   wireguard:
     image: linuxserver/wireguard
@@ -10,11 +10,11 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=Europe/London
-      - SERVERURL=auto #optional
-      - SERVERPORT=51820 #optional
-      - PEERS=1 #optional
-      - PEERDNS=auto #optional
-      - INTERNAL_SUBNET=10.13.13.0 #optional
+      - SERVERURL=auto
+      - SERVERPORT=51820 #change_this
+      - PEERS=1
+      - PEERDNS=auto
+      - INTERNAL_SUBNET=10.13.13.0
     volumes:
       - ./config:/config
       - /lib/modules:/lib/modules
